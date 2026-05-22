@@ -29,7 +29,8 @@ p, h3{
 .project{
     background-color: #224455;
     border-radius: 12px;
-    padding: 2%;
+    padding: 25px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,4 +54,22 @@ hr{
     width: 90vw;
     border: 3px solid #fff;
     border-radius: 2px;
+}
+
+.project-grid{
+    display: grid;
+    gap: 12px;
+    grid-template-columns: auto auto;
+    place-items: center;
+    margin-top: 20px;
+}
+
+.item-container{
+    width: 80%;
+}
+
+@media (max-width: 1000px){
+    .project-grid{
+        grid-template-columns: auto;
+    }
 }
