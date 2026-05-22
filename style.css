@@ -48,3 +48,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+hr{
+    width: 90vw;
+    border: 3px solid #fff;
+    border-radius: 2px;
+}
