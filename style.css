@@ -21,7 +21,7 @@ html {
     background-color: #0A1419;
 }
 
-p, h3{
+p, h3, li{
     color: #fff;
     font-family: "Lato", sans-serif;
 }
@@ -100,4 +100,13 @@ hr{
     font-weight: bold;
     font-size: 18px;
     margin: 12px;
+}
+
+.work-list{
+    list-style:square;
+    color: #fff;
+}
+
+.work-list li{
+    margin-bottom: 0.5rem;
 }
