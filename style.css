@@ -99,16 +99,6 @@ hr{
     width: 60%;
 }
 
-.tech-tag{
-    background-color: #1BF8E5;
-    color: #000;
-    padding: 5px 12px;
-    border-radius: 24px;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 12px;
-}
-
 .work-list{
     list-style:square;
     color: #fff;
@@ -119,12 +109,19 @@ hr{
     font-size: 18px;
 }
 
-.role-tag{
-    background-color: #4674D9;
+.tag{
     color: #000;
     padding: 5px 12px;
     border-radius: 24px;
     font-weight: bold;
     font-size: 18px;
     margin: 12px;
+    text-align: center;
+}
+.role{
+    background-color: #4674D9;
+    
+}
+.tech{
+    background-color: #1BF8E5;
 }
