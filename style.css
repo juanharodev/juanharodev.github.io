@@ -28,8 +28,8 @@ p, h3{
 
 .project{
     background-color: #224455;
-    border-radius: 12px;
-    padding: 25px;
+    border-radius: 12px 12px 0 0;
+    padding: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -38,9 +38,9 @@ p, h3{
 }
 
 .project-image{
-    width: 60%;
+    width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
 }
 
 body{
