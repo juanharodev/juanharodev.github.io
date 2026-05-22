@@ -10,3 +10,18 @@
     color: #fff;
     margin: 0;
 }
+
+h1, h2{
+    font-family: "Michroma", sans-serif;
+    color: #3D7A99;
+}
+
+
+html {
+    background-color: #0A1419;
+}
+
+p, h3{
+    color: #fff;
+    font-family: "Lato", sans-serif;
+}
