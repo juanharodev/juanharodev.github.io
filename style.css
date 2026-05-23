@@ -123,3 +123,10 @@ hr{
 .tech{
     background-color: #1BF8E5;
 }
+
+a{
+    color: #65CAFC;
+}
+a:visited{
+    color: #4489AB ;
+}
