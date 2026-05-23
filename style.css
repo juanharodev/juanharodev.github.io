@@ -136,3 +136,21 @@ a{
 a:visited{
     color: #4489AB ;
 }
+
+.social-icon{
+    display: flex;
+    align-self: center;
+    height: 32px;
+    width: auto;
+    align-self: center;
+}
+
+.social-icon-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 25%;
+    background-color: #224455;
+    padding: 10px;
+    border-radius: 25px;
+}
