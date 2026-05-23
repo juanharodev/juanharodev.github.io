@@ -13,7 +13,7 @@
 
 h1, h2{
     font-family: "Michroma", sans-serif;
-    color: #3D7A99;
+    color: #99DDFF;
 }
 
 
@@ -125,6 +125,9 @@ hr{
 }
 .skill{
     background-color: #55A9D4;
+}
+.software{
+    background-color: #42c48e;
 }
 
 a{
