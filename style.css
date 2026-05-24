@@ -21,7 +21,7 @@ html {
     background-color: #0A1419;
 }
 
-p, h3, li{
+p, li{
     color: #fff;
     font-family: "Lato", sans-serif;
 }
@@ -130,9 +130,10 @@ hr{
     background-color: #42c48e;
 }
 
-a{
+h3{
     color: #65CAFC;
 }
+
 a:visited{
     color: #4489AB ;
 }
@@ -153,4 +154,14 @@ a:visited{
     background-color: #224455;
     padding: 10px;
     border-radius: 25px;
+}
+
+.project-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 12px;
+    column-gap: 12px;
+    flex-wrap: wrap;
 }
