@@ -181,18 +181,18 @@ a:visited{
     margin-bottom: 20px;
 }
 
-.grid-item img {
+.grid-item img, .grid-item video{
     width: 100%;
     height: auto;
     border-radius: 10px;
     display: block;
 }
 
-.grid-item img{
+.grid-item img, .grid-item video{
     transition: transform .3s ease;
 }
 
-.grid-item img:hover{
+.grid-item img:hover, .grid-item video:hover{
     transform: scale(1.05);
 }
 
