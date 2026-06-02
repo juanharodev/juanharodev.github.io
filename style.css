@@ -165,3 +165,54 @@ a:visited{
     column-gap: 12px;
     flex-wrap: wrap;
 }
+
+
+.masonry-grid {
+    column-count: 3;
+    column-gap: 20px;
+    margin-top: 50px;
+}
+
+.grid-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.grid-item img{
+    transition: transform .3s ease;
+}
+
+.grid-item img:hover{
+    transform: scale(1.05);
+}
+
+
+/* Tablet */
+@media (max-width: 980px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+}
+@media (max-width: 767px) {
+    .masonry-grid {
+        column-gap: 10px;
+    }
+
+.grid-item {
+    margin-bottom: 10px;
+    }
+}
