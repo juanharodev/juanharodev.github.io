@@ -21,6 +21,14 @@ html {
     background-color: #0A1419;
 }
 
+body{
+    margin: 0;
+}
+
+h3{
+    margin: 8px 0;
+}
+
 p, li{
     color: #fff;
     font-family: "Lato", sans-serif;
@@ -293,4 +301,22 @@ a:visited{
     .about {
         grid-template-columns: 1fr;
     }
+}
+
+footer{
+    width: 100%;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    background-color: #224455;
+    margin-top: 3vh;
+}
+.footer-info{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+
+.back-to-top{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
