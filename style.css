@@ -29,7 +29,7 @@ h3{
     margin: 8px 0;
 }
 
-p, li{
+p, li, a{
     color: #fff;
     font-family: "Lato", sans-serif;
     font-size: 18px;
@@ -152,7 +152,6 @@ a:visited{
     align-self: center;
     height: 48px;
     width: auto;
-    align-self: center;
     margin: 8px;
 }
 
@@ -311,12 +310,42 @@ footer{
     margin-top: 3vh;
 }
 .footer-info{
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
 }
 
 .back-to-top{
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.top-arrow{
+    width: 32px;
+    height: 32px;
+    background-color: #99DDFF;
+    padding: 12px;
+    border-radius: 50%;
+    margin: 0 12px;
+    display: flex;
+    align-self: center;
+}
+
+.my-socials img{
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+}
+
+a{
+    color: #99DDFF; 
+}
+
+a:hover{
+    color: #65CAFC;
+}
+
+a:visited{
+    color: #55A9D4;
 }
