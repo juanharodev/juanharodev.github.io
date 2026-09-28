@@ -1,4 +1,3 @@
-
 using System.Text.Json;
 
 public class ToDo
@@ -13,9 +12,23 @@ public class ToDo
     List<ToDoEntry> entries = new List<ToDoEntry>();
     void Load()
     {
-        string json = File.ReadAllText(FilePath);
+        if (!FilePath.EndsWith(".json")){FilePath += ".json";}
 
-        entries = JsonSerializer.Deserialize<List<ToDoEntry>>(json)!;
+        string json = string.Empty;
+        if(File.Exists(FilePath))
+        {
+            json =  File.ReadAllText(FilePath);
+        }
+
+        try
+        {
+            entries = JsonSerializer.Deserialize<List<ToDoEntry>>(json)!;
+        }
+        catch
+        {
+            entries = new List<ToDoEntry>();
+            Save();
+        }
     }
 
     void Save()
@@ -37,15 +50,21 @@ public class ToDo
         PrintToDo(entries);
     }
 
+    public void ListToDo(string status)
+    {
+        ListToDo(GetStatusCode(status));
+    }
+
     public void ListToDo(int status)
     {
+        if("Invalid" == GetStatusName(status)){Console.WriteLine($"Invalid status, please provide a valid status ({GetStatusFilters()})");  return;}
         List<ToDoEntry> _entries = entries.Where(entry => entry.Status == status).ToList();  
         PrintToDo(_entries);
     }
 
     static void PrintToDo(List<ToDoEntry> _entries)
     {
-        Console.WriteLine("#\tTo Do\t\tStatus");
+        Console.WriteLine("ID\tTo Do\t\tStatus");
         for(int i = 0; i<_entries.Count; i++)
         {
             Console.WriteLine($"{i+1}\t{_entries[i].Content}\t\t{GetStatusName(_entries[i].Status)}");
@@ -65,12 +84,22 @@ public class ToDo
         Save();
     } 
 
+    public void UpdateToDoStatus(int index, string status)
+    {
+        UpdateToDoStatus(index, GetStatusCode(status));
+    }
+
     public void UpdateToDoStatus(int index, int status)
     {
         index--;
         if(index < 0 ||  entries.Count <= index)
         {
             Console.WriteLine("To Do does not exists\nPlease pick a valid To Do");
+            return;
+        }
+        if(GetStatusName(status) == "Invalid")
+        {
+            Console.WriteLine($"Please provide a valid status ({GetStatusFilters()})"); 
             return;
         }
         Console.WriteLine($"\"{entries[index].Content}\" status was updated from \"{GetStatusName(entries[index].Status)}\" to \"{GetStatusName(status)}\", successfully!");
@@ -86,7 +115,7 @@ public class ToDo
             Console.WriteLine("To Do does not exists\nPlease pick a valid To Do");
             return;
         }
-        Console.WriteLine($"Todo #{index + 1}  \"{entries[index].Content}\" was delete!");
+        Console.WriteLine($"Todo ID#{index + 1}: \"{entries[index].Content}\", was delete!");
         entries.RemoveAt(index);
         Save();
     }
@@ -102,6 +131,22 @@ public class ToDo
             0 => "To do",
             _ => "Invalid"
         };
+    }
+
+    public int GetStatusCode(string status)
+    {
+        return status.ToLower() switch
+        {
+            "0" or "todo" => 0,
+            "1" or "in-progress" => 1,
+            "2" or "done" => 2,
+            _ => -1,
+        };
+    }
+
+    public static string GetStatusFilters()
+    {
+        return "To do: 0, todo; In progress: 1, in-progress; Done: 2, done.";
     }
 }
 
