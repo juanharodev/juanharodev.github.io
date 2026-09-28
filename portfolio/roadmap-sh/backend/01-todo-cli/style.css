@@ -1,0 +1,45 @@
+code{
+    background-color: var(--color-card);
+    padding: 18px;
+    display: inline-block;
+    border-radius: 12px;
+    margin: 12px 0 32px 0;
+    width: 100%;
+}
+
+main{
+    padding: 1vh 5vw 2vh 5vw;
+}
+
+h1,h2,h3{
+    margin: 18px 0 8px 0;
+}
+
+li{
+    margin-bottom: 8px;
+}
+
+p{
+    margin-top: .75em;
+    margin-bottom: 1.25em;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.project-navigation{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var();
+}
+
+section{
+    scroll-margin-top: 60px;
+
+}
+
+*{
+    word-wrap: whitespace;
+}
