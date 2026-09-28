@@ -2,7 +2,11 @@
 {
     public static void Main(string[] args)
     {
-        if(args.Length<=0){return;}
+        if(args.Length<=0)
+        {
+            Console.WriteLine("Welcome to ToDo CLI, run the \"help\" for more info.");
+            return;
+        }
 
         ToDo toDo = new ToDo("ToDo");
         
