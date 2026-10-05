@@ -40,14 +40,7 @@ dotnet build
 ```
 <hr>
 
-5.  Restaura las dependencias del proyecto
-```bash
-dotnet restore
-```
-
-<hr>
-
-6.  Corre la aplicación usando argumentos para indicar el proceso a realizar
+5.  Corre la aplicación usando argumentos para indicar el proceso a realizar
 ```bash
 dotnet run "args"
 ```
