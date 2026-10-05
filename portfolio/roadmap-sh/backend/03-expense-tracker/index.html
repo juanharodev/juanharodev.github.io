@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Juan Haro | CLI bitácora de gastos</title>
+    <!-- SEO Meta tags -->
+    <meta name="description" content="Aplicación de consola diseñada con .NET 10 para resolver el reto de roadmap.sh Expense Tracker">
+    <meta name="keywords" content="roadmap-sh, dotnet, cshasrp, bitácora de gastos, proyecto">
+    <meta name="author" content="Juan Haro">
+    
+    <!-- Open Graph tags -->
+    <meta name="og:title" content="Juan Haro - CLI bitácora de gastos">
+    <meta name="og:description" content="Aplicación de consola diseñada con .NET 10 para resolver el reto de roadmap.sh Expense Tracker">
+    <meta name="og:image" content="">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="../../">Regresar a proyectos</a>
+        </div>
+        <nav>
+            <a href="#description">CLI bitácora de gastos</a>
+            <a href="#features">Características</a>
+            <a href="#installation">Instalación</a>
+            <a href="#guide">¿Cómo se usa?</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Project description -->
+        <section id="description">
+        <h1>CLI bitácora de gastos</h1>
+            <p>Proyecto creado como uno de los retos de Roadmap.sh</p>
+            <p>Aplicación de consola diseñada con .NET 10 para resolver el reto de roadmap.sh "<a href="https://roadmap.sh/projects/expense-tracker" target="_blank">Expense Tracker</a>".</p> 
+        </section>
+        
+        <!-- Features -->
+        <section id="features">
+
+            <h2 >Características</h2>
+            
+            <ul>
+                <li>Agregar gasto.</li>
+                <li>Listar los gastos.</li>
+                <li>Filtrar la lista de gastos por mes.</li>
+                <li>Actualizar gasto.
+                    <ul>
+                        <li>Description.</li>
+                        <li>Cantidad.</li>
+                    </ul>
+                </li>
+                <li>Eliminar gasto.</li>
+                <li>Mostrar total de gastos.</li>
+                <li>Mostrar total de gastos por mes.</li>
+                <li>Opciones de comando.</li>
+                <li>Persistencia de gastos mediante un archivo .json</li>
+            </ul>
+        </section>
+
+        <!-- Installation -->
+        <section id="installation">
+            <h2 >Instalación</h2>
+            <ol>
+                <li>
+                    <p>Clona el repositorio</p>
+                    <div class="code-snippet"><pre><code>git clone https://github.com/juanharodev/juanharodev.github.io.git</code></pre></div>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Abre la una terminal y navega hasta la carpeta del proyecto</p>
+                    <pre><code>cd /portfolio/roadmap-sh/backend/03-expense-tracker</code></pre>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Restaura las dependencias del proyecto</p>
+                    <pre><code>dotnet restore</code></pre>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Compila el proyecto</p>
+                    <pre><code>dotnet build</code></pre>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Corre la aplicación usando comando y las opciones para especificar el proceso a realizar.</p>
+                    <pre><code >dotnet run "command" "options"</code></pre>
+                </li>
+            </ol>
+        </section>
+        
+        <!-- Use Guide -->
+        <section id="guide">    
+            <h2 >¿Cómo se usa?</h2>
+            
+            <p>Una vez instalado usa el comando <em>dotnet run</em> junto a los argumentos deseados para iniciar el funcionamiento.</p>
+            
+            <h3>Comandos</h3>
+            <ul>
+                <li><em>"add"</em> Agrega un nuevo gasto.
+                    <ul>
+                        <li> <em>"--description" (Requerido)</em> Especifica la description del gasto.</li>
+                        <li> <em>"--amount"</em> Especifica la cantidad de dinero gastada.</li>
+                    </ul>
+                </li>
+                <li><em>"list"</em> Lista todos los gastos.
+                    <ul>
+                        <li><em>"--month"</em> Lista los gastos del mes especificado (1-12).</li>
+                    </ul>
+                </li>
+                <li><em>"update"</em> Actualiza los datos del gasto especificado.
+                    <ul>
+                        <li><em>"--id" (Requerido)</em> Especifica el id del gasto a modificar.</li>
+                        <li> <em>"--description"</em> Especifica la nueva description del gasto.</li>
+                        <li> <em>"--amount"</em> Especifica la  nueva cantidad de dinero gastada.</li>
+                    </ul>
+                </li>
+                <li><em>"delete"</em> Elimina un gasto especificado.
+                    <ul>
+                        <li><em>"--id" (Requerido)</em> Especifica el id del gasto a eliminar.</li>
+                    </ul>
+                </li>
+                <li><em>"summary"</em> Muestra el total de gastos.
+                    <ul>
+                        <li><em>"--month"</em> Muestra los gastos del mes especificado (1-12).</li>
+                    </ul>
+                </li>
+                <li><em>"--help"</em> Muestra ayuda del comando especificado.</li>
+
+            </ul>
+
+            <h3>Ejemplo de uso</h3>
+            
+            <pre><code>dotnet run add --description "Lunch" --amount 5.99 <br>dotnet run add --description "Phone bill"<br>dotnet run update --id 2 --amount 12.99<br>dotnet run list<br>dotnet run list --month 10<br>dotnet run delete --id 1<br>dotnet run summary<br>dotnet run summary --month 8</code></pre>
+        </section>
+    </main>
+    <script src="/Components/RunningSections/footer.js"></script>
+</body>
+</html>
