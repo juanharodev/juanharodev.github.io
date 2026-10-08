@@ -1,0 +1,14 @@
+button{
+    border: none;
+    background-color: #d6d1d1;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #beb7b7;
+}
+
+button.active{
+    text-decoration: solid 2px underline blue;
+    color: blue;
+}
