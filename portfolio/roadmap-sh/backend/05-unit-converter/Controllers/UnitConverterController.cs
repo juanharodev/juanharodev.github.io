@@ -15,7 +15,7 @@ namespace UnitConverter.Controllers
                status = "Working" 
             });
         }
-        [HttpGet("length-conversion")]
+        [HttpGet("length-converter")]
         public IActionResult LengthConversion(string from, string to, float originalValue)
         {
             List<string> errors = [];
