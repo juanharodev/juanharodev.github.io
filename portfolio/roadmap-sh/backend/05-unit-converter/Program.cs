@@ -1,10 +1,22 @@
 var builder = WebApplication.CreateBuilder(args);
 
+string localHostPort = "http://127.0.0.1:5500";
+string LocalCORS = "_LocalSpecifOrigins";
+
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddCors(options =>
+{
+   options.AddPolicy(name: LocalCORS, 
+        policy =>
+        {
+           policy.WithOrigins(localHostPort);
+        }) ;
+});
 
 var app = builder.Build();
 
@@ -19,6 +31,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(LocalCORS);
 
 app.UseAuthorization();
 
