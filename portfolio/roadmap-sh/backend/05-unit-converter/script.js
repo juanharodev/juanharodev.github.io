@@ -63,9 +63,16 @@ function initialize(){
         try{   
             const response = await fetch(url);
             const json = await response.json();
-            resultOutput.innerHTML = `${json.originalValue} ${json.from} = ${json.convertedValue} ${json.to}`;            
+            resultOutput.innerHTML = `
+            <h4>Result of your calculation:</h4>
+            <p>${json.originalValue} ${json.from} = ${json.convertedValue} ${json.to}</p>
+            `;            
         }catch(e){
             console.error(e);
+            resultOutput.innerHTML = `
+            <h4>Error: </h4>
+            <p>${e.message}</p>
+            `;
         }
     }
 
