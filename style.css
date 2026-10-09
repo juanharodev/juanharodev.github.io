@@ -7,7 +7,7 @@
     --color-anchor-hover: #7d00ff;
     --color-running-sections: #DFEDF6;
     --color-highlight: #036621;
-    --full-heigth: calc(100vh - 64px);
+    --full-height: calc(100vh - 64px);
     --color-card: #DFEDF6;
 }
 
@@ -114,7 +114,7 @@ body{
     align-content: center;
     justify-content: center;
     width: 100%;
-    min-height: var(--full-heigth);
+    min-height: var(--full-height);
 }
 
 #experience-section{
