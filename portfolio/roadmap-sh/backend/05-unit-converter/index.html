@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Juan Haro | Convertidor de unidades</title>
+    <!-- SEO Meta tags -->
+    <meta name="description" content="Aplicación de full stack diseñada con .NET 10, html, css y js para resolver el reto de roadmap.sh Unit Converter">
+    <meta name="keywords" content="roadmap-sh, dotnet, cshasrp, html, css, js, javascript, full stack, frontend, backend, convertidor de unidades, proyecto">
+    <meta name="author" content="Juan Haro">
+    
+    <!-- Open Graph tags -->
+    <meta name="og:title" content="Juan Haro - Convertidor de unidades">
+    <meta name="og:description" content="Aplicación de full stack diseñada con .NET 10, html, css y js para resolver el reto de roadmap.sh Unit Converter">
+    <meta name="og:image" content="">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="../../">Regresar a proyectos</a>
+        </div>
+        <nav>
+            <a href="#description">Convertidor de unidades</a>
+            <a href="#features">Características</a>
+            <a href="#installation">Instalación</a>
+            <a href="#guide">¿Cómo se usa?</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Project description -->
+        <section id="description">
+        <h1>Convertidor de unidades</h1>
+            <p>Proyecto creado como uno de los retos de Roadmap.sh</p>
+            <p>Aplicación de full stack diseñada con .NET 10, html, css y js para resolver el reto de roadmap.sh "<a href="https://roadmap.sh/projects/unit-converter" target="_blank">Convertidor de unidades</a>".</p> 
+        </section>
+        
+        <!-- Features -->
+        <section id="features">
+
+            <h2 >Características</h2>
+            
+            <ul>
+                <li>Api convertidora de unidades</li>
+                <li>Interfaz de usuario web para la conversion de unidades</li>
+                <li>Validación de datos</li>
+                <li>Conversion de longitud, peso y temperatura</li>
+                <li>Interfaz tipo pestaña para las distintas conversiones</li>
+                <li>Conexión fullstack de servicios</li>
+                <li>Manejo de errores</li>
+            </ul>
+        </section>
+
+        <!-- Installation -->
+        <section id="installation">
+            <h2 >Instalación</h2>
+            <ol>
+                <li>
+                    <p>Clona el repositorio</p>
+                    <div class="code-snippet"><pre><code>git clone https://github.com/juanharodev/juanharodev.github.io.git</code></pre></div>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Abre la una terminal y navega hasta la carpeta del proyecto</p>
+                    <pre><code>cd /portfolio/roadmap-sh/backend/05-unit-converter</code></pre>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Restaura las dependencias del proyecto</p>
+                    <pre><code>dotnet restore</code></pre>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Compila el proyecto</p>
+                    <pre><code>dotnet build</code></pre>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Abre "/portfolio/roadmap-sh/backend/05-unit-converter/program.cs" e indica el puerto que usaras como servidor web</p>
+                    <pre><code >string localHostPort = "http://XXX.X.X.X:XXXX";</code></pre>
+                </li>
+
+                <hr>
+                
+                <li>
+                    <p>Inicia el servicio de la API corriendo la aplicación</p>
+                    <pre><code >dotnet run</code></pre>
+                </li>
+
+                <hr>
+
+                <li>
+                    <p>Inicia un servidor web local, como vscode live server (usada personalmente) y en el navegador abre "/portfolio/roadmap-sh/backend/05-unit-converter/pages/" </p>
+                </li>
+            </ol>
+        </section>
+        
+        <!-- Use Guide -->
+        <section id="guide">    
+            <h2 >¿Cómo se usa?</h2>
+            
+            <p>Una vez iniciada la API y el servidor web, abre "/portfolio/roadmap-sh/backend/05-unit-converter/pages/" y usa la interfaz gráfica para realizar las distintas conversiones disponibles</p>
+
+            <p>También puedes ver el funcionamiento de la <a href="./pages/">interfaz de conversion</a> aunque no obtendrás resultados debido a la falta de la funcionalidad de la API</p>
+        
+            <h3>Ejemplo de uso</h3>
+            <img src="./static/unit-converter-ss-1.png" alt="Convertidor de unidades entrada" width="512px" height="521px">
+            <img src="./static/unit-converter-ss-2.png" alt="Convertidor de unidades entrada" width="512px" height="521px">
+        </section>
+    </main>
+    <script src="/Components/RunningSections/footer.js"></script>
+</body>
+</html>
