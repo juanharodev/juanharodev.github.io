@@ -64,13 +64,13 @@ function initialize(){
             const response = await fetch(url);
             const json = await response.json();
             resultOutput.innerHTML = `
-            <h4>Result of your calculation:</h4>
+            <h4>Resultado de la conversión:</h4>
             <p>${json.originalValue} ${json.from} = ${json.convertedValue} ${json.to}</p>
             `;            
         }catch(e){
             console.error(e);
             resultOutput.innerHTML = `
-            <h4>Error: </h4>
+            <h4>Ocurrió un error: </h4>
             <p>${e.message}</p>
             `;
         }
