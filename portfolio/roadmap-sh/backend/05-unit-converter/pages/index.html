@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Haro | Unit Converter</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+        <div>
+            <a href="../">Documentation</a>
+            <a href="../../../../">Portfolio</a>
+            <a href="../../../">My roadmap.sh projects</a>
+        </div>
+    </header>
+    <main>
+        <section id="unit-converter">
+            <h1>Unit converter</h1>
+            <div class="form-container">
+                <div class="tab-selector">
+                    <button id="length-button" class="active-tab tab" style="border-radius: 10px 0 0 0 ;">Length</button>
+                    <button id="weight-button" class="tab">Weight</button>
+                    <button id="temperature-button" class="tab" style="border-radius:  0 10px 0 0 ;">Temperature</button>
+                </div> 
+                <div class="tab-container">
+                    <!-- Length -->
+                    <div id="length-tab" class="tab">
+                        <!-- Length Conversion -->
+                        <h3>LengthConverter</h3>
+                        <form id="length-input" >
+                            <div class="input">
+                                <label for="originalValue">Type length value to convert</label>
+                                <input type="number" required name="originalValue">
+                                <br>
+                                <label for="from">Unit to convert from</label>
+                                <select name="from" id="from">
+                                    <option value="mm">Millimeters</option>
+                                    <option value="cm" selected="selected">Centimeters</option>
+                                    <option value="m">Meters</option>
+                                    <option value="km">Kilometers</option>
+                                    <option value="in">Inches</option>
+                                    <option value="ft">Foot</option>
+                                    <option value="yd">Yards</option>
+                                    <option value="mi">Miles</option>
+                                </select>
+                                <br>
+                                <label for="to">Unit to convert</label>
+                                <select name="to" id="to">
+                                    <option value="mm">Millimeters</option>
+                                    <option value="cm">Centimeters</option>
+                                    <option value="m">Meters</option>
+                                    <option value="km">Kilometers</option>
+                                    <option value="in">Inches</option>
+                                    <option value="ft" selected="selected">Foot</option>
+                                    <option value="yd">Yards</option>
+                                    <option value="mi">Miles</option>
+                                </select>
+                                <br>
+                                <button>Calculate</button>
+                            </div>
+                                
+                            </form>
+                            <div id="length-output">
+                                <br>
+                                <div id="length-result"></div>
+                                <br>
+                                <button id="length-reset">Reset</button>
+                            </div>
+                        </div>
+                    
+                    <!-- Weight -->
+                    <div id="weight-tab" class="tab">
+                        <!-- Weight Conversion -->
+                        <h3>Weight Converter</h3>
+                        <form id="weight-input">
+                            <div class="input">
+                                <label for="originalValue">Type weight value to convert</label>
+                                <input type="number" required name="originalValue">
+                                <br>
+
+                                <label for="from">Unit to convert from</label>
+                                <select name="from" id="from">
+                                    <option value="mg">Milligrams</option>
+                                    <option value="g" selected="selected">Grams</option>
+                                    <option value="kg">Kilograms</option>
+                                    <option value="oz">Ounce</option>
+                                    <option value="lb">Pound</option>
+                                </select>
+                                <br>
+
+                                <label for="to">Unit to convert to</label>
+                                <select name="to" id="to">
+                                    <option value="mg">Milligrams</option>
+                                    <option value="g">Grams</option>
+                                    <option value="kg">Kilograms</option>
+                                    <option value="oz" selected="selected">Ounce</option>
+                                    <option value="lb">Pound</option>
+                                </select>
+                                <br>
+
+                                <button>Calculate</button>
+                            </div>
+                        </form>
+
+                        <div id="weight-output">
+                            <br>
+                            <div id="weight-result"></div>
+                            <br>
+                            <button id="weight-reset">Reset</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Temperature -->
+                    <div id="temperature-tab" class="tab">
+                        <!-- Temperature Conversion -->
+                        <h3>Temperature Converter</h3>
+                        <form id="temperature-input">
+                            <div class="input">
+                                <label for="originalValue">Type temperature value to convert</label>
+                                <input type="number" required name="originalValue">
+                                <br>
+
+                                <label for="from">Unit to convert from</label>
+                                <select name="from" id="from">
+                                    <option value="C" selected="selected">Celsius</option>
+                                    <option value="F">Fahrenheit</option>
+                                    <option value="K">Kelvin</option>
+                                </select>
+                                <br>
+
+                                <label for="from">Unit to convert to</label>
+                                <select name="to" id="to">
+                                    <option value="C">Celsius</option>
+                                    <option value="F" selected="selected">Fahrenheit</option>
+                                    <option value="K">Kelvin</option>
+                                </select>
+                                <br>
+
+                                <button>Calculate</button>
+                            </div>
+                        </form>
+
+                        <div id="temperature-output">
+                            <br>
+                            <div id="temperature-result"></div>
+                            <br>
+                            <button id="temperature-reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </main>
+    <script src="/Components/RunningSections/footer.js"></script>
+</body>
+</html>
