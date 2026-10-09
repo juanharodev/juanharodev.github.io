@@ -24,19 +24,19 @@ function initialize(){
         weightTab.style.display = 'none';
         temperatureTab.style.display = 'none';
 
-        lengthButton.classList.remove("active");
-        weightButton.classList.remove("active");
-        temperatureButton.classList.remove("active");
+        lengthButton.classList.remove("active-tab");
+        weightButton.classList.remove("active-tab");
+        temperatureButton.classList.remove("active-tab");
         
         if(tab === 1){
-            lengthTab.style.display =  'block';
-            lengthButton.classList.add("active");
+            lengthTab.style.display = 'block';
+            lengthButton.classList.add("active-tab");
         }else if(tab === 2){
-            weightTab.style.display =  'block';
-            weightButton.classList.add("active");
+            weightTab.style.display = 'block';
+            weightButton.classList.add("active-tab");
         }else{
-            temperatureTab.style.display =  'block';
-            temperatureButton.classList.add("active");
+            temperatureTab.style.display = 'block';
+            temperatureButton.classList.add("active-tab");
         }
     } 
     
