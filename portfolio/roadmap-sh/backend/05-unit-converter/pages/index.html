@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Haro | Convertidor de unidades</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <a href="../../../">Regresar...</a>
+        <div>
+            <a href="../">Documentación</a>
+            <a href="/">Inicio</a>
+            <a href="../../../../">Portafolio</a>
+        </div>
+    </header>
+    <main>
+        <section id="unit-converter">
+            <h1>Convertidor de unidades</h1>
+            <div class="form-container">
+                <div class="tab-selector">
+                    <button id="length-button" class="active-tab tab" style="border-radius: 10px 0 0 0 ;">Longitud</button>
+                    <button id="weight-button" class="tab">Peso</button>
+                    <button id="temperature-button" class="tab" style="border-radius:  0 10px 0 0 ;">Temperatura</button>
+                </div> 
+                <div class="tab-container">
+                    <!-- Length -->
+                    <div id="length-tab" class="tab">
+                        <!-- Length Conversion -->
+                        <h3>Convertidor de longitud</h3>
+                        <form id="length-input" >
+                            <div class="input">
+                                <label for="originalValue">Escriba el valor de longitud a convertir</label>
+                                <input type="number" required name="originalValue">
+                                <br>
+                                <label for="from">Unidad original</label>
+                                <select name="from" id="from">
+                                    <option value="mm">Milímetros</option>
+                                    <option value="cm" selected="selected">Centímetros</option>
+                                    <option value="m">Metros</option>
+                                    <option value="km">Kilómetros</option>
+                                    <option value="in">Pulgadas</option>
+                                    <option value="ft">Pies</option>
+                                    <option value="yd">Yardas</option>
+                                    <option value="mi">Millas</option>
+                                </select>
+                                <br>
+                                <label for="to">Unidad del resultado</label>
+                                <select name="to" id="to">
+                                    <option value="mm">Milímetros</option>
+                                    <option value="cm" >Centímetros</option>
+                                    <option value="m">Metros</option>
+                                    <option value="km">Kilómetros</option>
+                                    <option value="in">Pulgadas</option>
+                                    <option value="ft" selected="selected">Pies</option>
+                                    <option value="yd">Yardas</option>
+                                    <option value="mi">Millas</option>
+                                </select>
+                                <br>
+                                <button>Calcular</button>
+                            </div>
+                                
+                            </form>
+                            <div id="length-output">
+                                <br>
+                                <div id="length-result"></div>
+                                <br>
+                                <button id="length-reset">Reiniciar</button>
+                            </div>
+                        </div>
+                    
+                    <!-- Weight -->
+                    <div id="weight-tab" class="tab">
+                        <!-- Weight Conversion -->
+                        <h3>Convertidor de peso</h3>
+                        <form id="weight-input">
+                            <div class="input">
+                                <label for="originalValue">Escriba el valor de peso a convertir</label>
+                                <input type="number" required name="originalValue">
+                                <br>
+
+                                <label for="from">Unidad original</label>
+                                <select name="from" id="from">
+                                    <option value="mg">Miligramos</option>
+                                    <option value="g" selected="selected">Gramos</option>
+                                    <option value="kg">Kilogramos</option>
+                                    <option value="oz">Onzas</option>
+                                    <option value="lb">Libras</option>
+                                </select>
+                                <br>
+
+                                <label for="to">Unidad del resultado</label>
+                                <select name="to" id="to">
+                                    <option value="mg">Miligramos</option>
+                                    <option value="g" >Gramos</option>
+                                    <option value="kg">Kilogramos</option>
+                                    <option value="oz" selected="selected">Onzas</option>
+                                    <option value="lb">Libras</option>
+                                </select>
+                                <br>
+
+                                <button>Calcular</button>
+                            </div>
+                        </form>
+
+                        <div id="weight-output">
+                            <br>
+                            <div id="weight-result"></div>
+                            <br>
+                            <button id="weight-reset">Reiniciar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Temperature -->
+                    <div id="temperature-tab" class="tab">
+                        <!-- Temperature Conversion -->
+                        <h3>Convertidor de temperatura</h3>
+                        <form id="temperature-input">
+                            <div class="input">
+                                <label for="originalValue">Escriba el valor de temperatura a convertir</label>
+                                <input type="number" required name="originalValue">
+                                <br>
+
+                                <label for="from">Unidad original</label>
+                                <select name="from" id="from">
+                                    <option value="C" selected="selected">Celsius</option>
+                                    <option value="F">Fahrenheit</option>
+                                    <option value="K">Kelvin</option>
+                                </select>
+                                <br>
+
+                                <label for="from">Unidad del resultado</label>
+                                <select name="to" id="to">
+                                    <option value="C">Celsius</option>
+                                    <option value="F" selected="selected">Fahrenheit</option>
+                                    <option value="K">Kelvin</option>
+                                </select>
+                                <br>
+
+                                <button>Calcular</button>
+                            </div>
+                        </form>
+
+                        <div id="temperature-output">
+                            <br>
+                            <div id="temperature-result"></div>
+                            <br>
+                            <button id="temperature-reset">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </main>
+    <script src="/Components/RunningSections/footer.js"></script>
+</body>
+</html>
