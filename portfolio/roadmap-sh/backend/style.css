@@ -5,6 +5,7 @@ code{
     border-radius: 12px;
     margin: 12px 0 32px 0;
     width: 100%;
+    font-family: monospace;
 }
 
 main{
@@ -38,8 +39,4 @@ html{
 section{
     scroll-margin-top: 60px;
 
-}
-
-*{
-    word-wrap: whitespace;
 }

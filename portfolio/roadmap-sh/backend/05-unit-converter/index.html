@@ -6,6 +6,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
 
     <title>Juan Haro | Convertidor de unidades</title>
     <!-- SEO Meta tags -->
@@ -67,42 +68,42 @@
             <ol>
                 <li>
                     <p>Clona el repositorio</p>
-                    <div class="code-snippet"><pre><code>git clone https://github.com/juanharodev/juanharodev.github.io.git</code></pre></div>
+                    <div class="code-snippet"><code>git clone https://github.com/juanharodev/juanharodev.github.io.git</code></pre>
                 </li>
                 
                 <hr>
                 
                 <li>
                     <p>Abre la una terminal y navega hasta la carpeta del proyecto</p>
-                    <pre><code>cd /portfolio/roadmap-sh/backend/05-unit-converter</code></pre>
+                    <code>cd /portfolio/roadmap-sh/backend/05-unit-converter</code>
                 </li>
                 
                 <hr>
                 
                 <li>
                     <p>Restaura las dependencias del proyecto</p>
-                    <pre><code>dotnet restore</code></pre>
+                    <code>dotnet restore</code>
                 </li>
                 
                 <hr>
                 
                 <li>
                     <p>Compila el proyecto</p>
-                    <pre><code>dotnet build</code></pre>
+                    <code>dotnet build</code>
                 </li>
                 
                 <hr>
                 
                 <li>
                     <p>Abre "/portfolio/roadmap-sh/backend/05-unit-converter/program.cs" e indica el puerto que usaras como servidor web</p>
-                    <pre><code >string localHostPort = "http://XXX.X.X.X:XXXX";</code></pre>
+                    <code >string localHostPort = "http://XXX.X.X.X:XXXX";</code>
                 </li>
 
                 <hr>
                 
                 <li>
                     <p>Inicia el servicio de la API corriendo la aplicación</p>
-                    <pre><code >dotnet run</code></pre>
+                    <code >dotnet run</code>
                 </li>
 
                 <hr>
@@ -122,8 +123,10 @@
             <p>También puedes ver el funcionamiento de la <a href="./pages/">interfaz de conversion</a> aunque no obtendrás resultados debido a la falta de la funcionalidad de la API</p>
         
             <h3>Ejemplo de uso</h3>
-            <img src="./static/unit-converter-ss-1.png" alt="Convertidor de unidades entrada" width="512px" height="521px">
-            <img src="./static/unit-converter-ss-2.png" alt="Convertidor de unidades entrada" width="512px" height="521px">
+            <div class="img-container">
+                <img src="./static/unit-converter-ss-1.png" alt="Ejmplo del convertidor de unidades de longitud"  width="80%" height="auto" class="example-images">
+                <img src="./static/unit-converter-ss-2.png" alt="Ejemplo del un resultado del convertidor de entradas" width="80%" height="auto" class="example-images">
+            </div>
         </section>
     </main>
     <script src="/Components/RunningSections/footer.js"></script>
