@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO meta tags -->
+    <meta name="description" content="Componentes de tarjetas testimoniales">
+    <meta name="keywords" content="componente, formulario, accesibilidad, interfaz de usuario, diseño">
+    <meta name="author" content="Juan Haro">
+    
+    <!-- Open graph meta tags -->
+    <meta name="og:title" content="Juan Haro - Formulario con accesibilidad">
+    <meta name="og:description" content="Formulario con accesibilidad">
+    <meta name="og:image" content="">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="">
+    <title>Juan Haro - Formulario con accesibilidad</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="/Assets/icons/Favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header><a href="../../">Regresar...</a></header>
+    <main>
+        <form action="">
+            <div class="profile">
+                <div class="profile-section">
+                    <label for="full-name">Nombre Completo</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="¿Cómo deberíamos llamarte?">
+                    <p id="full-name-message" aria-label="Error de nombre" style="display: none;"></p>
+                    
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" placeholder="¿Cuál es tu correo?" value="john@doe.com" class="error">
+                    <p id="email-message" aria-label="Error de correo" class="error">El correo ya esta en uso</p>
+                    
+                    <label for="password">Entre su contraseña</label>
+                    <div class="password">
+                        <input type="password" name="password" id="password" placeholder="xxxxxx">
+                        <button aria-label="Mostrar contraseña"><img src="/Assets/icons/eye.webp" title="ojos iconos" alt="" width="18px" height="18px"></button>
+                    </div>
+                    <p id="password-message" aria-label="Error de contraseña" style="display: none;"></p>
+                    
+                    <label for="password-confirm">Confirme su contraseña</label>
+                    <div class="password">
+                        <input type="password" name="password-confirm" id="password-confirm" placeholder="xxxxxx">
+                        <button aria-label="Mostrar confirmación de contraseña"><img src="/Assets/icons/eye.webp" alt="" width="18px" height="18px"></button>
+                    </div>
+                    <p id="password-confirm-message" aria-label="Error de confirmación de contraseña"  style="display: none;"></p>
+                    
+                    <button type="submit">Actualizar Perfil</button>
+                </div>
+                <div class="profile-section">
+                    <div class="progress">
+                        65%
+                    </div>
+                    <h3 style="text-align: center;">Progreso del perfil</h3>
+                    <ul>
+                        <li class="completed">Crear una cuenta</li>
+                        <li class="completed">Actualizar el progreso de la hoja de ruta</li>
+                        <li class="completed">Crear un perfil público</li>
+                        <li>Completar tu primer proyecto</li>
+                        <li>Invitar a tus amigos</li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
