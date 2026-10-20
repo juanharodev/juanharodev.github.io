@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesuble Form UI</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <form action="">
+            <div class="profile">
+                <div class="profile-section">
+                    <label for="full-name">Nombre Completo</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="¿Cómo deberíamos llamarte?">
+                    <p id="full-name-message" aria-label="Error de nombre" style="display: none;"></p>
+                    
+                    <label for="email">Correo</label>
+                    <input type="email" name="email" id="email" placeholder="¿Cuál es tu correo?" value="john@doe.com" class="error">
+                    <p id="email-message" aria-label="Error de correo" class="error">El correo ya esta en uso</p>
+                    
+                    <label for="password">Entre su contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="xxxxxx">
+                    <p id="password-message" aria-label="Error de contraseña" style="display: none;"></p>
+                    
+                    <label for="password-confirm">Confirme su contraseña</label>
+                    <input type="text" name="password-confirm" id="password-confirm" placeholder="xxxxxx">
+                    <p id="password-confirm-message" aria-label="Error de confirmacion de contraseña"  style="display: none;"></p>
+                    
+                    <button type="submit">Actualizar Perfil</button>
+                </div>
+                <div class="profile-section">
+                    <div class="progress">
+                        65%
+                    </div>
+                    <h3 style="text-align: center;">Profile Completeness</h3>
+                    <ul>
+                        <li class="completed">Create account</li>
+                        <li class="completed">Update Roadmap Progress</li>
+                        <li class="completed">Setup Public Profile</li>
+                        <li>Complete your first project</li>
+                        <li>Invite your friends</li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
