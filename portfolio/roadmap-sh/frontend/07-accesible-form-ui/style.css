@@ -33,7 +33,7 @@
 }
 
 .error{
-    color: red;
+    color: rgb(189, 8, 8);
 }
 
 p.error{
@@ -100,7 +100,7 @@ ul{
     list-style: none;
     border-radius: 2em;
     padding: 2em;
-    background-color: #E4E4E4;
+    background-color: #efefef;
     flex-grow: 3;
 }
 
@@ -109,6 +109,6 @@ li{
 }
 
 .completed{
-    color: #A9A9A9;
-    text-decoration: line-through;
+    color: #494646;
+    text-decoration: line-through #626060;
 }
