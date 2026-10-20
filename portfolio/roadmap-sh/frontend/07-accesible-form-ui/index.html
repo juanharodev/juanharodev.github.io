@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header></header>
+    <header><a href="../../">Regresar...</a></header>
     <main>
         <form action="">
             <div class="profile">
@@ -18,15 +18,21 @@
                     
                     <label for="email">Correo</label>
                     <input type="email" name="email" id="email" placeholder="¿Cuál es tu correo?" value="john@doe.com" class="error">
-                    <p id="email-message" aria-label="Error de correo" class="error">El correo ya esta en uso</p>
+                    <p id="email-message" aria-labErrorel="Error de correo" class="error">El correo ya esta en uso</p>
                     
                     <label for="password">Entre su contraseña</label>
-                    <input type="password" name="password" id="password" placeholder="xxxxxx">
+                    <div class="password">
+                        <input type="password" name="password" id="password" placeholder="xxxxxx">
+                        <button aria-label="Mostrar contraseña"><img src="https://img.icons8.com/?size=100&id=84887&format=png&color=000000" alt="" width="15px" height="15px"></button>
+                    </div>
                     <p id="password-message" aria-label="Error de contraseña" style="display: none;"></p>
                     
                     <label for="password-confirm">Confirme su contraseña</label>
-                    <input type="text" name="password-confirm" id="password-confirm" placeholder="xxxxxx">
-                    <p id="password-confirm-message" aria-label="Error de confirmacion de contraseña"  style="display: none;"></p>
+                    <div class="password">
+                        <input type="password" name="password-confirm" id="password-confirm" placeholder="xxxxxx">
+                        <button aria-label="Mostrar confirmación de contraseña"><img src="https://img.icons8.com/?size=100&id=84887&format=png&color=000000" alt="" width="15px" height="15px"></button>
+                    </div>
+                    <p id="password-confirm-message" aria-label="Error de confirmación de contraseña"  style="display: none;"></p>
                     
                     <button type="submit">Actualizar Perfil</button>
                 </div>
