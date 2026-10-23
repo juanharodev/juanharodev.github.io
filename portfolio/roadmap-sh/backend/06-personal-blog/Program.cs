@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PersonalBlog.Data;
+using PersonalBlog.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,13 @@ builder.Services.AddDbContext<BlogContext>(
 );
 
 var app = builder.Build();
+
+using(IServiceScope scope = app.Services.CreateScope())
+{
+    IServiceProvider services = scope.ServiceProvider;
+
+    SeedBlogData.Seed(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
