@@ -2,7 +2,7 @@
 @{
     ViewData["title"] = Html.DisplayFor(model => model.PostTitle);
 }
-
+<a asp-action="Index">Regresar a publicaciones</a>
 <h1>@Html.DisplayFor(model => model.PostTitle)</h1>
 <p>Post #@Html.DisplayFor(model => model.Id) - @Html.DisplayFor(model => model.PublicationDate)</p>
 <hr>
