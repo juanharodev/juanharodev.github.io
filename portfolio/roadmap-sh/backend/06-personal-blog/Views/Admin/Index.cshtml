@@ -1,0 +1,23 @@
+@model IEnumerable<BlogPost>
+
+@{
+    ViewData["title"] = "Panel de administración";
+}
+
+<h1>Panel de administración</h1>
+<a asp-action="Create">+ Agregar publicación</a>
+
+<table class="table">
+    <tbody>
+        @foreach(BlogPost post in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelPost => post.PostTitle)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@post.Id">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@post.Id">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
