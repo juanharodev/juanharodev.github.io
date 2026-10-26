@@ -18,4 +18,23 @@ public class AdminController : Controller
     {
         return View(await _context.Posts.ToListAsync());
     }
+
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create([Bind("PostTitle,PublicationDate,Content")] BlogPost blogPost)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(blogPost);
+        }
+
+        _context.Add(blogPost);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
 }
