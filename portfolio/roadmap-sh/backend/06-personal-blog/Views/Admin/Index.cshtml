@@ -14,7 +14,7 @@
             <tr>
                 <td>@Html.DisplayFor(modelPost => post.PostTitle)</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@post.Id">Editar</a>
+                    <a asp-action="Update" asp-route-id="@post.Id">Editar</a>
                     <a asp-action="Delete" asp-route-id="@post.Id">Borrar</a>
                 </td>
             </tr>
