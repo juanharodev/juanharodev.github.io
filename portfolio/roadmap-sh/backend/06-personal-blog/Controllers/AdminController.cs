@@ -89,6 +89,37 @@ public class AdminController : Controller
        return RedirectToAction(nameof(Index));
     }
 
+    public async Task<IActionResult> Delete(int? id)
+    {
+        if(id == null)
+        {
+            return NotFound();
+        }
+
+        BlogPost? post = await _context.Posts.FirstOrDefaultAsync(p => p.Id ==id);
+
+        if(post == null)
+        {
+            return NotFound();
+        }
+
+        return View(post);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ConfirmDelete(int id)
+    {
+        BlogPost? post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == id);
+        if(post != null)
+        {
+            _context.Posts.Remove(post);
+        }
+
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
     bool PostExists(int id)
     {
         return _context.Posts.Any(p => p.Id == id);
