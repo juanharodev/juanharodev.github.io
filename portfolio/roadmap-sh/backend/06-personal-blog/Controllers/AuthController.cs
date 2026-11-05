@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PersonalBlog.Data;
 using PersonalBlog.Models;
@@ -66,6 +67,12 @@ public class AuthController : Controller
         }
 
         return RedirectToAction("Index","Home");
+    }
+
+    [Authorize]
+    public IActionResult Profile()
+    {
+        return View();
     }
 
     public IActionResult Forbidden()
