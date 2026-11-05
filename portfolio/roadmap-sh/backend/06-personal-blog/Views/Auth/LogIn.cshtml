@@ -1,0 +1,27 @@
+@model PersonalBlog.Models.UserLogin
+@{
+    ViewData["title"] = "Iniciar Sesión";
+}
+
+<h1>Inicio de sesión</h1>
+
+<div class="mx-auto">
+    <form asp-action="LogIn" asp-controller="Auth" class="space-y-6">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group my-3">
+            <label asp-for="Email" class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+            <input asp-for="Email" class="form-control">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group my-3">
+            <label asp-for="Password" class="control-label">@Html.DisplayNameFor(model => model.Password)</label>
+            <input asp-for="Password" class="form-control">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="my-3">
+            <label asp-for="IsPersistent" required class="control-label">@Html.DisplayNameFor(model => model.IsPersistent)</label>
+            <input asp-for="IsPersistent" class="check">
+        </div>
+        <button type="submit" class="btn btn-primary ">Acceder</button>
+    </form>
+</div>
