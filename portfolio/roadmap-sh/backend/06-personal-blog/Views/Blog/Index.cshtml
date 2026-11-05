@@ -1,0 +1,37 @@
+@model IEnumerable<BlogPost>
+
+@{
+    ViewData["title"] = "Blog";
+}
+
+<h1>Publicaciones del blog</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PostTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublicationDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(BlogPost post in Model)
+    {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelPost => post.PostTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelPost => post.PublicationDate)
+                </td>
+                <td>
+                    <a asp-action="Post" asp-route-id="@post.Id">Leer Mas</a>
+                </td>
+        </tr>
+    }
+    </tbody>
+</table>
