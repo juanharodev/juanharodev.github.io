@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PersonalBlog.Data;
@@ -5,6 +6,7 @@ using PersonalBlog.Models;
 
 namespace PersonalBlog.Controllers;
 
+[Authorize("Admin")]
 public class AdminController : Controller
 {
     private readonly BlogContext _context;
