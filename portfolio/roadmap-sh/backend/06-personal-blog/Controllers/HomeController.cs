@@ -1,14 +1,26 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PersonalBlog.Data;
 using PersonalBlog.Models;
 
 namespace PersonalBlog.Controllers;
 
 public class HomeController : Controller
 {
-    public IActionResult Index()
+    private readonly BlogContext _context;
+    public HomeController(BlogContext context)
     {
-        return View();
+        _context = context;
+    }
+
+    public async Task<IActionResult> Index()
+    {
+        List<BlogPost> recentPosts = await _context.Posts
+            .OrderByDescending(p => p.PublicationDate)
+            .Take(3)
+            .ToListAsync();
+        return View(recentPosts);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
