@@ -18,6 +18,9 @@ builder.Services.AddAuthentication(Constants.COOKIE_BASIC_SCHEME)
         options.AccessDeniedPath = "/Auth/Forbidden";
         options.Cookie.Name = Constants.COOKIE_BASIC_SCHEME;
     });
+    
+builder.Services.AddAuthorizationBuilder()
+    .AddPolicy("Admin", options => options.RequireClaim("IsAdmin","true"));
 
 var app = builder.Build();
 
