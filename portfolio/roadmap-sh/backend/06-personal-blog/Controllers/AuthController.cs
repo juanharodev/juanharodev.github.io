@@ -54,6 +54,20 @@ public class AuthController : Controller
         return RedirectToAction("Profile","Auth");
     }
 
+    [HttpPost]
+    public async Task<IActionResult> LogOut()
+    {
+        await HttpContext.SignOutAsync(Constants.COOKIE_BASIC_SCHEME);
+
+        string? returnUrl = HttpContext.Request.Query["returnUrl"];
+        if(!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+        {
+            Redirect(returnUrl);
+        }
+
+        return RedirectToAction("Index","Home");
+    }
+
     public IActionResult Forbidden()
     {
         return View();
