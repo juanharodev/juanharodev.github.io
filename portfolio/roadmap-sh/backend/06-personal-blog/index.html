@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../05-unit-converter/style.css">
+
+    <title>Juan Haro | Blog Personal</title>
+    <!-- SEO Meta tags -->
+    <meta name="description" content="Aplicación de full stack diseñada con .NET 10, html, css y js para resolver el reto de roadmap.sh blog personal">
+    <meta name="keywords" content="roadmap-sh, dotnet, cshasrp, aspnet, mvc, razor pages, html, css, full stack, frontend, backend, blog">
+    <meta name="author" content="Juan Haro">
+    
+    <!-- Open Graph tags -->
+    <meta name="og:title" content="Juan Haro - Blog personal">
+    <meta name="og:description" content="Aplicación de full stack diseñada con .NET 10, html, css y js para resolver el reto de roadmap.sh blog personal">
+    <meta name="og:image" content="">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="../../">Regresar a proyectos</a>
+        </div>
+        <nav>
+            <a href="#description">Blog personal</a>
+            <a href="#features">Características</a>
+            <a href="#installation">Instalación</a>
+            <a href="#guide">¿Cómo se usa?</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Project description -->
+        <section id="description">
+        <h1>Blog personal</h1>
+            <p>Proyecto creado como uno de los retos de Roadmap.sh</p>
+            <p>Aplicación de full stack diseñada con .NET 10, html, css y js para resolver el reto de roadmap.sh "<a href="https://roadmap.sh/projects/personal-blog" target="_blank">Blog personal</a>".</p> 
+        </section>
+        
+        <!-- Features -->
+        <section id="features">
+
+            <h2 >Características</h2>
+            
+            <ul>
+                <li>Controladores de ruta</li>
+                <li>Conexión y consulta de bases de datos</li>
+                <li>Validación de datos</li>
+                <li>Autenticación y session mediante cookies</li>
+                <li>Authorization basada en claims</li>
+                <li>Páginas dinámicas</li>
+                <li>Sistema de plantillas para páginas</li>
+            </ul>
+        </section>
+
+        <!-- Installation -->
+        <section id="installation">
+            <h2 >Instalación</h2>
+            <ol>
+                <li>
+                    <p>Clona el repositorio</p>
+                    <div class="code-snippet"><code>git clone https://github.com/juanharodev/juanharodev.github.io.git</code></pre>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Abre la una terminal y navega hasta la carpeta del proyecto</p>
+                    <code>cd /portfolio/roadmap-sh/backend/06-personal-blog</code>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Restaura las dependencias del proyecto</p>
+                    <code>dotnet restore</code>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Compila el proyecto</p>
+                    <code>dotnet build</code>
+                </li>
+                
+                <hr>
+                
+                <li>
+                    <p>Ejecuta la aplicación</p>
+                    <code >dotnet watch</code>
+                </li>
+
+                <hr>
+                
+                <li>
+                    <p>Navega al puerto de local host asignado y explora la página</p>
+                    <code >dotnet run</code>
+                </li>
+            </ol>
+        </section>
+        
+        <!-- Use Guide -->
+        <section id="guide">    
+            <h2 >¿Cómo se usa?</h2>
+            
+            <p>En la página de inicio podrás ver la publicaciones mas recientes.</p>
+            <p>En la página de publicaciones podrás ver todas las publicaciones.</p>
+            <p>En acceder podrás acceder a una cuenta con un correo y contraseña, se hicieron 2 cuentas estáticas,las credenciales para accde son:</p>
+            <ul>
+                <li>Cuenta de administrador: correo - admin@example.com, contraseña - admin1234</li>
+                <li>Cuenta de usuario: correo - user@example.com, contraseña - user1234</li>
+            </ul>
+            <p>En la cuenta de usuario podrás acceder a la página de perfil.</p>
+            <p>En la cuenta de administrador podrás acceder a la página de perfil asi como al panel de administración que permite crear, editar y borrar publicaciones.</p>
+        
+            <h3>Ejemplo de uso</h3>
+
+            <div class="img-container">
+                <img src="/Assets/Img/BlogPersonal/Blog-Inicio.png" alt="Página de inicio del blog"  width="80%" height="auto" class="example-images">
+                <img src="/Assets/Img/BlogPersonal/Blog-Posts.png" alt="Página de publicaciones del blog"  width="80%" height="auto" class="example-images">
+                <img src="/Assets/Img/BlogPersonal/Post-Leer.png" alt="Página de publicación"  width="80%" height="auto" class="example-images">
+                <img src="/Assets/Img/BlogPersonal/Acceder.png" alt="Página de inicio de sesión"  width="80%" height="auto" class="example-images">
+                <img src="/Assets/Img/BlogPersonal/Perfil.png" alt="Página de perfil de usuario"  width="80%" height="auto" class="example-images">
+                <img src="/Assets/Img/BlogPersonal/Panel-Administracion.png" alt="Página del panel de administración"  width="80%" height="auto" class="example-images">
+                <img src="/Assets/Img/BlogPersonal/Post-Crear.png" alt="Página para crear una publicación"  width="80%" height="auto" class="example-images">
+                <img src="/Assets/Img/BlogPersonal/Post-Editar.png" alt="Página para editar una publicación"  width="80%" height="auto" class="example-images">
+                <img src="/Assets/Img/BlogPersonal/Post-Borrar.png" alt="Página para borrar una publicación"  width="80%" height="auto" class="example-images">
+            </div>
+        </section>
+    </main>
+    <script src="/Components/RunningSections/footer.js"></script>
+</body>
+</html>
