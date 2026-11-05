@@ -11,6 +11,14 @@ builder.Services.AddDbContext<BlogContext>(
     options => options.UseSqlite(builder.Configuration.GetConnectionString("BlogContext"))
 );
 
+builder.Services.AddAuthentication(Constants.COOKIE_BASIC_SCHEME)
+    .AddCookie(Constants.COOKIE_BASIC_SCHEME, options =>
+    {
+        options.LoginPath = "/Auth/Login";
+        options.AccessDeniedPath = "/Auth/Forbidden";
+        options.Cookie.Name = Constants.COOKIE_BASIC_SCHEME;
+    });
+
 var app = builder.Build();
 
 using(IServiceScope scope = app.Services.CreateScope())
@@ -31,6 +39,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
