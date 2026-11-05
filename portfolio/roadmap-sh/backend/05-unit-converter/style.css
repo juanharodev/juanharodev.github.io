@@ -1,7 +1,7 @@
 .example-images{
    min-height: 0;
    min-width: 0;
-   max-width: 512px;
+   max-width: 80%;
 }
 
 .img-container{
@@ -9,10 +9,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 24px;
 }
 
 @media (1200px < width) {
     .img-container{
         flex-direction: row;
+        flex-wrap: wrap;
     }
 }

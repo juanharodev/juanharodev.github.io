@@ -1,0 +1,20 @@
+@{
+    ViewData["title"] = "Perfil";
+}
+
+<h1>Hola @(User.Identity?.Name ?? "Desconocido")</h1>
+
+@if (User.Claims.Any())
+{       
+    <h2>Sus claims son: </h2>
+    <ul>
+        @foreach(var claim in User.Claims)
+        {
+            <li>@claim.ToString()</li>
+        }
+    </ul>
+}
+else
+{
+    <h2>No cuenta con ningún claim!!</h2>
+}

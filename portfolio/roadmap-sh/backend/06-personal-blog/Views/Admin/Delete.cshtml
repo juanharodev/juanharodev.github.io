@@ -1,0 +1,26 @@
+@model BlogPost
+
+@{
+    ViewData["title"] = "Borrar";
+}
+<div>
+    <a asp-action="index">Regresar al panel de administración</a>
+</div>
+<hr>
+<h1>Borrar</h1>
+<hr>
+
+<h2>¿Quieres borrar el siguiente post?</h2>
+
+<dl>
+    <dt>@Html.DisplayNameFor(model => model.PostTitle)</dt>
+    <dd>@Html.DisplayFor(model => model.PostTitle)</dd>
+    
+    <dt>@Html.DisplayNameFor(model => model.PublicationDate)</dt>
+    <dd>@Html.DisplayFor(model => model.PublicationDate)</dd>
+</dl>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-danger">Borrar</button>
+</form>
