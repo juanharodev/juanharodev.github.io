@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Juan Haro | Portafolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Aplicación de escritorio para generar cotizaciones en PDF">
+    <meta name="keywords" content="Aplicación de escritorio, Cotizadora, Java, Manejo de archivos, Generación PDF, librePDF"></menu>
+    <meta name="author" content="Juan Haro">
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Juan Haro - Cotizadora">
+    <meta property="og:description" content="Aplicación de escritorio para generar cotizaciones en PDF">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/Assets/icons/Favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Michroma&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">   
+    <link rel="stylesheet" href="./style.css">   
+</head>
+<body>
+    <script src="/Components/RunningSections/header.js"></script>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <h1>> Generador de Cotizaciones de Escritorio</h1>
+            <p>
+                Aplicación de escritorio robusta y eficiente desarrollada en <strong>Java</strong>, diseñada para optimizar y automatizar el flujo de creación de cotizaciones comerciales. 
+                <br>
+                El sistema combina una interfaz intuitiva con potentes capacidades de procesamiento de documentos en PDF, permitiendo a los usuarios gestionar desde cálculos dinámicos, distintos archivos de cotización y cotizaciones complejas con archivos adjuntos.
+            </p>
+            <a href="https://github.com/juanharodev/cotizador">Repositorio del proyecto</a>
+        </section>
+
+        <!-- Tech stack -->
+        <section class="tech-stack">
+            <h2>> Stack Tecnológico</h2>
+            <ul>
+                <li><strong>Lenguaje:</strong> Java</li>
+                <li><strong>Interfaz Gráfica:</strong>  Swing</li>
+                <li><strong>Generación de Documentos:</strong>  LibrePDF</li>
+            </ul>
+        </section>
+
+        <!-- Characteristics -->
+        <section class="characteristics">
+            <h2>> Características Principales</h2>
+            <div style="padding-left: 28px;">
+                <div>
+                    <h3>> Gestión dinámica de productos</h3>
+                    <ul>
+                        <li>
+                            <strong>Gestión dinámica de productos:</strong> Permite al usuario ingresar los datos de los productos a cotizar de forma fluida.  
+                        </li>
+                        <li>
+                            <strong>Actualización instantánea:</strong> El subtotal, los impuestos y el total general se calculan y se reflejan de manera automática conforme se van añadiendo o modificando los elementos en la cotización.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>> Motor de Generación de PDFs Personalizados</h3>
+                    <ul>
+                        <li>
+                            <strong>Variedad de formatos:</strong> Ofrece múltiples plantillas de diseño pre construidas para elegir la cotización con la empresa que mejor se adapte al requerimiento del cliente.
+                        </li>
+                        <li>
+                            <strong>Diseño estructurado:</strong> Cada formato cuenta con características únicas en disposición, tipografía, paleta de colores e iconografía.
+                        </li>
+                        <li>
+                            <strong>Componentes estáticos y dinámicos:</strong> Incorpora elementos fijos profesionales (como encabezados y pies de página corporativos en cada hoja) junto con la sección dinámica que detalla los productos y datos financieros de la cotización.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>>Cotizaciones Formal y Anexos</h3>
+                    <ul>
+                        <li>
+                            <strong>Campos extendidos:</strong> Soporte para generar cotizaciones formales que solicitan información y campos adicionales, los cuales se distribuyen y muestran de manera coherente a lo largo de todo el documento.
+                        </li>
+                        
+                        <li>
+                            <strong>Unión automatizada de anexos:</strong> Capacidad para incluir documentos adicionales que se integran y fusionan automáticamente en un solo archivo PDF final, facilitando el envío de documentación complementaria.
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>> Sistema de Respaldo y Portabilidad de Datos</h3>
+                    <ul>
+                        <li>
+                            <strong>Gestión basada en archivos:</strong> Implementa un sistema seguro de guardado y cargado de datos local.
+                        </li>
+
+                        <li>
+                            <strong>Intercambio seguro:</strong> Permite respaldar la información o transferirla fácilmente a terceros mediante archivos estructurados que pueden ser leídos y abiertos por cualquier otro usuario que cuente con la aplicación.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery">
+            <h2>Galería  del proyecto</h2>
+            <div class="gallery-container">
+                <div class="gallery-card">
+                    <h3>Menú de inicio de la aplicación</h3>
+                    <p>En este menú podemos manejar los datos comunes de la cotización como: </p>
+                    <ul>
+                        <li>Fecha</li>
+                        <li>Número/Título</li>
+                        <li>Destinatario</li>
+                    </ul>
+                    <p>
+                        Así como los artículos junto a sus propiedades.
+                        <br>
+                        Además, desde este menú podemos acceder a los otros menús:
+                    </p>
+                    <ul>
+                        <li>Archivo (Guardar, Abrir, Cerrar, Nuevo...)</li>
+                        <li>Exportar (Cotización básica y compleja)</li>
+                    </ul>
+                    <p>
+                        Además de poder previsualizar el subtotal, impuesto y total de todos los artículos.
+                    </p>
+                    <img src="/Assets/Img/Cotizadora/MenuDeInicio.webp" alt="" style="max-width: 100%;">
+                </div>
+                <div class="gallery-card">
+                    <h3>Menú de exportación documento básico</h3>
+                    <p>En este menú  podemos exportar las cotizaciones básicas, eligiendo el formato y lugar en el que se guardaran los documentos.</p>
+                    <img src="/Assets/Img/Cotizadora/MenuExportar-1.webp" alt=""  style="max-width: 100%;">
+                </div>
+                <div class="gallery-card">
+                    <h3>Menú de exportación documento complejo </h3>
+                    <p>
+                        En este menú  se realiza la exportación de cotizaciones complejas, conteniendo campos adicionales de información, como el tipo, presente, condiciones de pago etc.
+                    </p>
+                    <p>
+                        En este menú también podemos agregar formatos necesarios para realizar este tipo de cotización, siendo algunos de estos las validaciones, RUPC, constancias fiscales entre otros.
+                    </p>
+                    <img src="/Assets/Img/Cotizadora/MenuExportar-2.webp" alt=""  style="max-width: 100%;">
+                </div>
+                <div class="half-container">
+                    <div class="half-card">
+                        <h3>Documento básico</h3>
+                        <p>Un documento básico usando uno de los formatos preestablecidos, cada uno con sus propias imágenes, fuentes, colores e iconografías; y mostrando los  productos correspondientes de la cotización.</p>
+                        <img src="/Assets/Img/Cotizadora/Ejemplo_Documento_1.webp" alt=""  style="max-width: 100%;">
+                    </div>
+                    <div class="half-card">
+                        <h3>Documento complejo</h3>
+                        <p>
+                            Un documento complejo, contando con los campos adicionales introducidos durante la exportación.
+                            <br>
+                            Este documento es más largo al consistir de múltiples  anexos, algunos generados con la información y otros incluidos de manera externa uniendo los demás documentos agregados.
+                            <br>
+                            Adicionalmente, este documento cuenta con funciones adicionales, como unión  de documentos, paginación y muestra de la cantidad de páginas  en secciones del documento, así como funciones generales como pie, encabezado, imágenes entre otros. 
+                        </p>
+                        <img src="/Assets/Img/Cotizadora/Ejemplo_Documento_2.webp" alt=""  style="max-width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/Components/RunningSections/footer.js"></script>
+</body>
