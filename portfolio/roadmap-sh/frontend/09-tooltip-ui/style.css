@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+}
+
+.menu{
+    width: 100%;
+    padding: 48px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    10% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fade-out {
+    from {opacity: .5;}
+    to {opacity: 0;}
+}
+
+.tooltip > .tip {
+    opacity: 0;
+    animation: fade-out;
+    animation-duration: 1s;
+    position: absolute;
+    background-color: #000;
+    color: #FFF;
+    max-width: 200px;
+    margin: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    justify-self: center;
+    transform: translateY(calc(-100% - 1em));
+}
+
+.tooltip:hover > .tip{
+    opacity: 1;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    
+}
