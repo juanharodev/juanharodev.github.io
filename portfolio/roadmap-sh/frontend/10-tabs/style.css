@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-container{
+    width: 80%;
+    margin: 24px auto;
+    padding: 24px;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+.tab-header{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.tab-header > div{
+    padding: 8px;
+}
+
+.tab-header > div:hover{
+    cursor: pointer;
+}
+
+.tab-header > div:hover,
+.tab-header > .selected{
+    color: #000;
+    border-bottom: 1px solid black;
+}
+
+.tab-header > .unselected{
+    color: #A6A6A6;
+}
+
+.tab-content{
+    height: 300px;
+    overflow-y: auto;
+}
+
+.tab-content  img{
+    max-width: 250px;
+    margin-bottom: 12px;
+}
+
+.tab-main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 12px;
+   border-radius: 12px; 
+}
+
+.tab-content > .unselected{
+    display: none;
+}
+
+.tab-content > .selected{
+    display: block;
+}
