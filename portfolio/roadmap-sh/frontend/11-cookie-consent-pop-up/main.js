@@ -1,4 +1,5 @@
-let accepted = false;
+let showConsent = false;
+const COOKIE_CONSENT_NAME = "consent";
 
 function popUp(){
     const cookie = document.querySelector("#cookie");
@@ -12,7 +13,7 @@ function popUp(){
 function popDown(){
     const cookieConsent = document.querySelector("#cookie-consent");
     cookieConsent.style.transform = "scale(0)";
-    if(accepted === false){
+    if(showConsent === false){
         setTimeout(() => {
             const btnCookie = document.querySelector("#cookie");
             btnCookie.style.transform = "scale(1)";
@@ -21,17 +22,46 @@ function popDown(){
 }
 
 function agree(){
-    accepted = true;
+    setCookie(COOKIE_CONSENT_NAME,"true",1);
+    showConsent = true;
     popDown();
 }
 
 function reject(){
-    accepted = true;
+    setCookie(COOKIE_CONSENT_NAME,"false",1);
+    showConsent = true;
     popDown();
 }
 
+function setCookie(cookieName,cookieValue, expirationDays){
+    const date = new Date();
+    date.setTime(date.getTime() + (expirationDays*24*60*60*1000));
+    let expires = "expires" + date.toUTCString();
+    document.cookie = cookieName + "=" + cookieValue + ";" + expires;
+}
+
+function getCookie(cookieName){
+    let name = cookieName + "=";
+    let decodedCookie = decodeURI(document.cookie);
+    let ca = decodedCookie.split(";");
+    for(let i = 0; i<ca.length; i++){
+        let c = ca[i];
+        while(c.charAt(0) == ' '){
+            c = c.substring(1);
+        }
+        if(c.startsWith(name)){
+            return c.substring(name.length,);
+        }
+    }
+
+    return "";
+}
 
 document.addEventListener("DOMContentLoaded",()=>{
+
+    showConsent = getCookie(COOKIE_CONSENT_NAME) !== "";
+
+    if(showConsent){ return; }
 
     setTimeout(popUp, 2000);
 
@@ -44,9 +74,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     btnAccept.addEventListener("click",agree);
     btnReject.addEventListener("click",reject);
 
-    let x = document.cookie;
-    console.log(x);
-
     let btnCookie = document.querySelector("#cookie")
     btnCookie.addEventListener("click",popUp);
+
 });

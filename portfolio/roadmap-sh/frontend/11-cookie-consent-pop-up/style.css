@@ -76,6 +76,8 @@ main, nav{
 }
 
 #cookie{
+    cursor: pointer;
+
     background-color: #000;
     padding: 12px;
     border-radius: 100%;
@@ -84,6 +86,8 @@ main, nav{
     width: 48px;
     right: 24px;
     bottom: 24px;
+
+    transform: scale(0);
 
     transform-origin: right bottom;
     transition: transform 0.5s ease-in-out;
