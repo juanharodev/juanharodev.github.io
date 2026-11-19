@@ -24,6 +24,8 @@ main, nav{
     padding: 24px;
     width: 240px;
     height: 320px;
+    max-width: 70%;
+    max-height: 70%;
     border-radius: 24px;
     position: fixed;
     right: 24px;
@@ -34,6 +36,11 @@ main, nav{
     
     transform-origin: right bottom;
     transition: transform 0.5s ease-in-out;
+}
+
+#cookie-consent img{
+    height: 78px;
+    width: 78px;
 }
 
 .cookie-options{
