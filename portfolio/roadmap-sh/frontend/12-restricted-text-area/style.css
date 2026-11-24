@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+form.comment{
+    width: 80%;
+    margin: 24px auto;
+}
+
+div.comment{
+    position: relative;
+    width: 100%;
+}
+
+.comment textarea{
+    outline: none;
+    resize: none;
+    margin-top: 12px;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 12px;
+    width: 100%;
+    height: 200px;
+}
+
+@media (width > 450px) {
+    .comment textarea{
+        height: 150px;
+    }
+}
+
+@media (width > 768px) {
+    .comment textarea{
+        height: 100px;
+    }
+}
+
+.word-counter{
+    position: absolute;
+    padding: 2px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9;
+    color: grey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fff;
+}
+
+.comment textarea.full {
+    border: 2px solid red;
+    color: red;
+}
+.comment .word-counter.full{
+    color: red;
+}
+
+
